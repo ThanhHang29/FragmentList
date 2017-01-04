@@ -19,10 +19,12 @@ import java.util.ArrayList;
 
 public class ListContactAdapter extends RecyclerView.Adapter<ListContactAdapter.ViewHolder> {
     private ArrayList<ListContactData> datas;
-    private ArrayList<ListContactData> newContact = new ArrayList<>();
+    private ArrayList<ListContactData> newContact = new ArrayList<>();// không nên new luôn ở đây
 
+//truyền newContact ở contructor
     public ListContactAdapter(ArrayList<ListContactData> datas) {
         this.datas = datas;
+        // this.newContact = ....
     }
 
     @Override

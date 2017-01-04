@@ -14,7 +14,7 @@ public class ListContactData implements Serializable {
 
     public ListContactData() {
     }
-
+    // lần sau nên dùng cái Parcelable vì nó nhanh và không tốn tài nguyên hơn
     public ListContactData(String name, String phone, String id) {
         this.name = name;
         this.phone = phone;

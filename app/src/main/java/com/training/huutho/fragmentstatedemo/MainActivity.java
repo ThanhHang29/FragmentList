@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Fragment fragmentCurrent = getFragmentManager().findFragmentById(layoutId)
+        // nên xét theo cách tìm fragment theo id nếu là id trả vể fragment còn không thì trả về null
         if (savedInstanceState != null) {
             listContactFragment = (ListContactFragment) getSupportFragmentManager()
                     .getFragment(savedInstanceState, "list.contact.fragment");
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         replaceFragment(R.id.main_layout, listContactFragment);
     }
-
+// lưu fragmnet không cần thiết bằng phương thức này, hầu như phương thức này hệ thống tự mặc định.
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
